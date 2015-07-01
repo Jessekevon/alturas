@@ -1,0 +1,22 @@
+@import 'variables/base',
+		'vendor/base',
+		'partials/base';
+
+.classname {
+	opacity: .5;
+    box-sizing: border-box;
+    transform: scale(.5);
+    display: flex;
+
+	.bam {
+		color: orange;
+	}
+}
+
+.sample {
+	background-color: blue;
+}
+
+h2 {
+	color: red;
+}
