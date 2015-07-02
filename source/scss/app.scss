@@ -1,22 +1,38 @@
-@import 'variables/base',
+@import 'helpers/base',
 		'vendor/base',
-		'partials/base';
+		'partials/base',
+		'pages/base';
 
-.classname {
-	opacity: .5;
-    box-sizing: border-box;
-    transform: scale(.5);
-    display: flex;
+// Table of contents
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+//- Grid
+//- Base Styles
+//- Typography
+//- Links
+//- Buttons
+//- Forms
+//- Lists
+//- Code
+//- Tables
+//- Spacing
+//- Utilities
+//- Clearing
+//- Media Queries
 
-	.bam {
-		color: orange;
-	}
+// Base Styles
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+// NOTE
+// html is set to 62.5% so that all the REM measurements throughout Skeleton
+// are based on 10px sizing. So basically 1.5rem = 15px :)
+
+html {
+  font-size: 62.5%;
 }
 
-.sample {
-	background-color: blue;
-}
-
-h2 {
-	color: red;
+body {
+  font-size: 1.5em; // currently ems cause chrome bug misinterpreting rems on body element
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: $font-primary;
+  color: $font-color;
 }

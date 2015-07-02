@@ -513,3 +513,161 @@ require get_template_directory() . '/inc/customizer.php';
 if ( ! class_exists( 'Featured_Content' ) && 'plugins.php' !== $GLOBALS['pagenow'] ) {
 	require get_template_directory() . '/inc/featured-content.php';
 }
+
+/**
+ * 
+ *
+ * ---------------  BEGIN CUSTOM POST TYPE FUNCTIONS
+ *
+ * 
+ */
+
+
+// Register Custom Post Type - Artists in Residence
+
+function artist_residence_post_type() {
+
+$labels = array(
+'name'                => _x( 'Artists In Residence', 'Post Type General Name', 'text_domain' ),
+'singular_name'       => _x( 'Artists In Residence', 'Post Type Singular Name', 'text_domain' ),
+'menu_name'           => __( 'Artists In Residence', 'text_domain' ),
+'parent_item_colon'   => __( 'Parent Item:', 'text_domain' ),
+'all_items'           => __( 'All Artists In Residence', 'text_domain' ),
+'view_item'           => __( 'View Post', 'text_domain' ),
+'add_new_item'        => __( 'Add New Artists In Residence', 'text_domain' ),
+'add_new'             => __( 'Add New', 'text_domain' ),
+'edit_item'           => __( 'Edit Post', 'text_domain' ),
+'update_item'         => __( 'Update Post', 'text_domain' ),
+'search_items'        => __( 'Search Projects', 'text_domain' ),
+'not_found'           => __( 'Not found', 'text_domain' ),
+'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
+);
+$args = array(
+'label'               => __( 'artist_residence', 'text_domain' ),
+'description'         => __( 'Post Type De4scription', 'text_domain' ),
+'labels'              => $labels,
+'supports'            => array( 'title', 'thumbnail', 'revisions', 'editor', 'excerpt' ),
+'taxonomies'          => array( 'post_tag' ),
+'hierarchical'        => false,
+'public'              => true,
+'show_ui'             => true,
+'show_in_menu'        => true,
+'show_in_nav_menus'   => true,
+'show_in_admin_bar'   => true,
+'menu_position'       => 4,
+'can_export'          => true,
+'has_archive'         => true,
+'exclude_from_search' => false,
+'publicly_queryable'  => true,
+'capability_type'     => 'post',
+);
+register_post_type( 'artist_residence', $args );
+
+// http://codex.wordpress.org/Function_Reference/flush_rewrite_rules
+flush_rewrite_rules();
+
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'artist_residence_post_type', 0 );
+
+//
+// Register Custom Post Type - Public Installations
+
+function public_installations_post_type() {
+
+$labels = array(
+'name'                => _x( 'Public Installations', 'Post Type General Name', 'text_domain' ),
+'singular_name'       => _x( 'Public Installations', 'Post Type Singular Name', 'text_domain' ),
+'menu_name'           => __( 'Public Installations', 'text_domain' ),
+'parent_item_colon'   => __( 'Parent Item:', 'text_domain' ),
+'all_items'           => __( 'All Public Installations', 'text_domain' ),
+'view_item'           => __( 'View Post', 'text_domain' ),
+'add_new_item'        => __( 'Add New Public Installations', 'text_domain' ),
+'add_new'             => __( 'Add New', 'text_domain' ),
+'edit_item'           => __( 'Edit Post', 'text_domain' ),
+'update_item'         => __( 'Update Post', 'text_domain' ),
+'search_items'        => __( 'Search Projects', 'text_domain' ),
+'not_found'           => __( 'Not found', 'text_domain' ),
+'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
+);
+$args = array(
+'label'               => __( 'public_installations', 'text_domain' ),
+'description'         => __( 'Post Type De4scription', 'text_domain' ),
+'labels'              => $labels,
+'supports'            => array( 'title', 'thumbnail', 'revisions', 'editor', 'excerpt' ),
+'taxonomies'          => array( 'post_tag' ),
+'hierarchical'        => false,
+'public'              => true,
+'show_ui'             => true,
+'show_in_menu'        => true,
+'show_in_nav_menus'   => true,
+'show_in_admin_bar'   => true,
+'menu_position'       => 4,
+'can_export'          => true,
+'has_archive'         => true,
+'exclude_from_search' => false,
+'publicly_queryable'  => true,
+'capability_type'     => 'post',
+);
+register_post_type( 'public_installations', $args );
+
+// http://codex.wordpress.org/Function_Reference/flush_rewrite_rules
+flush_rewrite_rules();
+
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'public_installations_post_type', 0 );
+
+//
+// Register Custom Post Type - Exhibition Suppport
+
+function exhibition_support_post_type() {
+
+$labels = array(
+'name'                => _x( 'Exhibition Suppport', 'Post Type General Name', 'text_domain' ),
+'singular_name'       => _x( 'Exhibition Suppport', 'Post Type Singular Name', 'text_domain' ),
+'menu_name'           => __( 'Exhibition Suppport', 'text_domain' ),
+'parent_item_colon'   => __( 'Parent Item:', 'text_domain' ),
+'all_items'           => __( 'All Exhibition Suppport', 'text_domain' ),
+'view_item'           => __( 'View Post', 'text_domain' ),
+'add_new_item'        => __( 'Add New Exhibition Suppport', 'text_domain' ),
+'add_new'             => __( 'Add New', 'text_domain' ),
+'edit_item'           => __( 'Edit Post', 'text_domain' ),
+'update_item'         => __( 'Update Post', 'text_domain' ),
+'search_items'        => __( 'Search Projects', 'text_domain' ),
+'not_found'           => __( 'Not found', 'text_domain' ),
+'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
+);
+$args = array(
+'label'               => __( 'exhibition_support', 'text_domain' ),
+'description'         => __( 'Post Type De4scription', 'text_domain' ),
+'labels'              => $labels,
+'supports'            => array( 'title', 'thumbnail', 'revisions', 'editor', 'excerpt' ),
+'taxonomies'          => array( 'post_tag' ),
+'hierarchical'        => false,
+'public'              => true,
+'show_ui'             => true,
+'show_in_menu'        => true,
+'show_in_nav_menus'   => true,
+'show_in_admin_bar'   => true,
+'menu_position'       => 4,
+'can_export'          => true,
+'has_archive'         => true,
+'exclude_from_search' => false,
+'publicly_queryable'  => true,
+'capability_type'     => 'post',
+);
+register_post_type( 'exhibition_support', $args );
+
+// http://codex.wordpress.org/Function_Reference/flush_rewrite_rules
+flush_rewrite_rules();
+
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'exhibition_support_post_type', 0 );

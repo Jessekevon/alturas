@@ -8,19 +8,17 @@
  */
 
 get_header(); ?>
-<div class="wrap">
-  <div class="col2 item"></div>
-  <div class="col2 item last"></div>
-  <div class="col3 item"></div>
-  <div class="col3 item"></div>
-  <div class="col3 item last"></div>
-  <div class="col3 item"></div>
-  <div class="col3 item"></div>
-  <div class="col3 item last"></div>
-  <div class="col4 item"></div>
-  <div class="col4 item"></div>
-  <div class="col4 item"></div>
-  <div class="col4 item last"></div>
-</div>
+  <div class="landing-background-image" style="background: url('http://localhost:8888/alturas/wp-content/uploads/2015/07/Snowmobile-Headlights-Valley-Road-Custer-County-Idaho-2004-LoRes.jpg') no-repeat 50% 50%; background-size:cover">
+    <div class="image-content-wrapper">
+      <h1>Laura McPhee</h1>
+      <p>Artist In Residence</p>
+    </div>
+  </div>
+  <div class="landing-background-image" style="background: url('http://localhost:8888/alturas/wp-content/uploads/2015/07/SPIRAL-JETTY-AERIAL-001_BW.jpg') no-repeat 50% 50%; background-size:cover">
+    <div class="image-content-wrapper">
+      <h1>Robert Smithson The Whitney Museum</h1>
+      <p>Exhibition Support</p>
+    </div>
+  </div>
 <?php
 get_footer();

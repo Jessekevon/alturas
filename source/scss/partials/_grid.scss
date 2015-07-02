@@ -6,7 +6,7 @@ $susy: (
   column-width: 30px, // false | value
   container: auto, // length or % | auto
   container-position: center, // left | center | right | <length> [*2] (grid padding)
-  last-flow: to,
+  last-flow: from,
   columns: 12,
   gutters: .5,
   gutter-position: split, // before | after | split | inside | inside-static (requires column-width)
@@ -27,7 +27,7 @@ $susy: (
 );
 
 // 'magic' container >> http://susy.oddbird.net/demos/magic/
-.wrap{
+.container {
   @include container(960px);
 }
 
@@ -44,55 +44,40 @@ $susy: (
   .col2{
     @include span(6);
 
-    &.last{
-      @include span(6 last);
-    }
-
   }
 
   .col3{
     @include span(4);
-
-    &.last{
-      @include span(4 last);
-    }
 
   }
 
   .col4{
     @include span(6);
 
-    &.last{
-      @include span(6 last);
-    }
-
   }
-  .wrap{
+  .container {
     @include container(750px);
   }
 }
 
 @media (min-width: 992px) {
-  .wrap{
+  .container {
     @include container(970px);
   }
   .col4{
     @include span(3);
 
-    &.last{
-      @include span(3 last);
-    }
   }
 }
 
 @media (min-width: 1200px) {
-  .wrap{
+  .container {
     @include container(1170px);
   }
 }
 
 .item{
-  background-color: #3ef98a;
+  background-color: $light-grey;
   height: 200px;
   margin-bottom: 30px;
 }
