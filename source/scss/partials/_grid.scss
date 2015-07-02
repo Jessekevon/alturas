@@ -27,7 +27,7 @@ $susy: (
 );
 
 // 'magic' container >> http://susy.oddbird.net/demos/magic/
-.container {
+.wrap{
   @include container(960px);
 }
 
@@ -55,13 +55,13 @@ $susy: (
     @include span(6);
 
   }
-  .container {
+  .wrap{
     @include container(750px);
   }
 }
 
 @media (min-width: 992px) {
-  .container {
+  .wrap{
     @include container(970px);
   }
   .col4{
@@ -71,7 +71,7 @@ $susy: (
 }
 
 @media (min-width: 1200px) {
-  .container {
+  .wrap{
     @include container(1170px);
   }
 }

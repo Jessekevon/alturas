@@ -77,14 +77,15 @@
 }
 
 
-$font-primary:        'ClearfaceStd';
-$font-secondary:      'Helvetica Neue';
+$font-primary:'ClearfaceStd';
+$font-primary-book:'ClearfaceStd';
 
+$font-secondary: 'MyriadPro';  
+$font-helvetica: 'Helvetica Neue';       
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 1rem;
-  color: $white;
   font-weight: 300;
   font-family: $font-primary;
 }
@@ -108,7 +109,7 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0;       }
 
 p {
   margin-top: 0;
-  color: $white;
+  color: $black;
   font-family: $font-secondary;
   letter-spacing: .1rem;
   font-size: 1.2rem;
