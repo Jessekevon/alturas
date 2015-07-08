@@ -23,7 +23,7 @@ var AUTOPREFIXER_BROWSERS = [
 	'bb >= 10'
 ];
 
-gulp.task('clean', del([PATHS.dist]));
+// gulp.task('clean', del([PATHS.dist]));
 
 gulp.task('styles', function() {
 	return gulp.src(PATHS.scss)
@@ -62,8 +62,8 @@ gulp.task('watch', function() {
 	gulp.watch([PATHS.watch], ['styles']);
 });
 
-gulp.task('build', ['clean'], function() {
-	plugins.sequence('styles', ['jshint', 'images', 'fonts']);
-});
+// gulp.task('build', ['clean'], function() {
+// 	plugins.sequence('styles', ['jshint', 'images', 'fonts']);
+// });
 
 gulp.task('default', ['watch']);

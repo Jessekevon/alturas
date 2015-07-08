@@ -8,17 +8,39 @@
  */
 
 get_header(); ?>
-  <div class="landing-background-image" style="background: url('http://localhost:8888/alturas/wp-content/uploads/2015/07/Snowmobile-Headlights-Valley-Road-Custer-County-Idaho-2004-LoRes.jpg') no-repeat 50% 50%; background-size:cover">
-    <div class="image-content-wrapper">
-      <h1>Laura McPhee</h1>
-      <p>Artist In Residence</p>
+
+
+<div class="landing">
+  
+  <div class="slider fade1">
+    <?php $posts_left = $cfs->get('homepage_gallery_left'); ?>
+    <?php foreach ($posts_left as $post_id_left) : ?>
+    <?php $background_left = wp_get_attachment_image_src( get_post_thumbnail_id($post_id_left), 'full' ); ?>
+    <?php $post_left = get_post( $post_id_left ); ?>
+    <div class="landing-background-image" style="background: url(<?php echo $background_left['0']?>) no-repeat 50% 50%; background-size:cover">
+      <div class="image-content-wrapper">
+        <h2><?php echo get_the_title($post_id_left); ?></h2>
+        <p>Artist In Residence</p>
+      </div>
     </div>
+  <?php endforeach; ?>
   </div>
-  <div class="landing-background-image" style="background: url('http://localhost:8888/alturas/wp-content/uploads/2015/07/SPIRAL-JETTY-AERIAL-001_BW.jpg') no-repeat 50% 50%; background-size:cover">
-    <div class="image-content-wrapper">
-      <h1>Robert Smithson The Whitney Museum</h1>
-      <p>Exhibition Support</p>
+
+  <div class="slider fade2">
+    <?php $posts_right = $cfs->get('homepage_gallery_right'); ?>
+    <?php foreach ($posts_right as $post_id_right) : ?>
+    <?php $background_right = wp_get_attachment_image_src( get_post_thumbnail_id($post_id_right), 'full' ); ?>
+    <?php $post_right = get_post( $post_id_right ); ?>
+    <div class="landing-background-image" style="background: url(<?php echo $background_right['0']?>) no-repeat 50% 50%; background-size:cover">
+      <div class="image-content-wrapper">
+        <h2><?php echo get_the_title($post_id_right); ?></h2>
+        <p>Artist In Residence</p>
+      </div>
     </div>
+  <?php endforeach; ?>
   </div>
+
+</div>
+
 <?php
 get_footer();

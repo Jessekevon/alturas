@@ -3,7 +3,7 @@ $susy: (
   flow: ltr, // ltr | rtl
   output: float, // float | isolate
   math: fluid, // fluid | static (requires column-width)
-  column-width: 30px, // false | value
+  column-width: 70px, // false | value
   container: auto, // length or % | auto
   container-position: center, // left | center | right | <length> [*2] (grid padding)
   last-flow: from,
@@ -47,7 +47,7 @@ $susy: (
   }
 
   .col3{
-    @include span(4);
+    @include span(6);
 
   }
 
@@ -64,11 +64,20 @@ $susy: (
   .wrap{
     @include container(970px);
   }
+
   .col4{
     @include span(3);
 
   }
 }
+
+@media (min-width: 1025px) {
+  .col3{
+    @include span(4);
+
+  }
+}
+
 
 @media (min-width: 1200px) {
   .wrap{

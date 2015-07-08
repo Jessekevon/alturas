@@ -1,0 +1,44 @@
+// Modal
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// Modal Overlay
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  background: rgba(255, 255, 255, 0.9);
+  backface-visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .5s;
+  
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  img.close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    width: 16px;
+    top: 5px;
+    right: 18px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(0) translate3d(0, 0, 0) translateZ(0);
+    backface-visibility: hidden;
+    transition: opacity .5s, transform .5s;
+    transition-delay: .45s;
+  }
+    img.close {
+      pointer-events: auto;
+      transform: translateY(60px);
+      opacity: 1;
+    }
+
+}
+

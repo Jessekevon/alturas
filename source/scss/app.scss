@@ -1,7 +1,8 @@
 @import 'helpers/base',
-		'vendor/base',
-		'partials/base',
-		'pages/base';
+				'vendor/base',
+				'partials/base',
+				'componants/base',
+				'pages/base';
 
 // Table of contents
 //––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -47,6 +48,11 @@ body {
   margin: 0;
   float: left;
   position: relative;
+  // @include scale_1;
+
+  // &:hover {
+  // 	@include scale
+  // }
 }
 
 @media (min-width: 992px){
@@ -66,13 +72,11 @@ body {
   padding: 0 10%;
   @include flush;
 
-    h1 {
+    h2 {
       color: $white;
     }
     p {
       color: $white;
-      letter-spacing: .4rem;
-      text-transform: uppercase;
     }
 }
 
@@ -82,29 +86,39 @@ body {
 .intro {
 	text-align: center;
 	position: relative;
+	padding: 40px;
 		@media (min-width: 768px) {
-			@include span(8);
-			@include push(2);
+			@include span(10);
+			@include push(1);
+			padding: 80px 0;
+
 		}
 
-		@media (min-width: 992px) {
-			padding: 80px 0;
-		}
 
 	.intro-content {
 		color: $black;
 
-		h1 {
-			font-size: 8.0rem;
-			// @include flush;
-		}
+		h5 {
+			margin-top: 20px;
+			margin-bottom: 0;
+			@media (min-width: 768px) {
+				@include span(8);
+				@include push(2);
+			}
 
-		p {
-			padding: 0 20%;
 		}
 	}
 }
 
+.secondary {
+	h1 {
+		@include flush;
+	}
+}
+
+.secondary-intro {
+	padding-top: 0;
+}
 // Feature 
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
@@ -121,11 +135,11 @@ body {
 	}
 
 	.feature-block {
-		height: 500px;
 		margin: 0 auto;
 		background-color: $white;
 		position: relative;
 		width: 100%;
+		height: 500px;
 		@include border-bottom;
 
 
@@ -145,17 +159,184 @@ body {
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 .image-block {
-	height: 500px;
 	margin-bottom: 30px;
 }
 
 .image-block-background-image {
-	height: 300px;
+	height: 367px;
+
+	// @include scale_1;
+
+	// &:hover {
+	// 	@include scale
+	// }
+
 }
 
 .image-block-content {
-	background-color: $light-grey;
-	padding: 40px;
+	padding: 20px;
 	text-align: center;
+	background-color: $light-grey;
 	@include border-bottom;
+
+	@media (min-width: 992px) {
+		padding: 0;
+		height: 175px;
+
+	}
+
+	h3 {
+		@media (min-width: 992px) {
+			padding: 0 40px;
+		}
+	}
+
+	p {
+		margin-bottom: 0;
+	}
 }
+
+@media (min-width: 992px) {
+	.image-block-content-inner {
+		@include vertical-align;
+	}
+
+
+}
+
+.single-background {
+	position: relative;
+	height: 50vh;
+	width: 100%;
+	display: inline-block;
+	background-color: $light-grey;
+
+	@media (min-width: 992px) {
+		width: 50%;
+		height: 100vh;
+	}
+}
+
+.single-image-content-wrapper {
+	@include vertical-align;
+	text-align: center;
+
+}
+
+.left {
+	position: absolute;
+	left: 0;
+}
+
+.right {
+position: absolute;
+right: 0;
+}
+
+// Single Page Body Content 
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.body-content {
+
+	padding: 0 30px;
+		@media (min-width: 992px) {
+			padding: 0;
+		}
+	.overview {
+		margin-bottom: 40px;
+			@media (min-width: 992px) {
+				@include span(6);
+				@include push(1);
+				margin-bottom: 0;
+			}
+	}
+
+	.sidebar {
+		margin-bottom: 40px;
+			@media (min-width: 992px) {
+				@include span(3);
+				@include push(1);
+				margin-bottom: 0;
+			}
+
+			h6 {
+				margin-bottom: 20px;
+				padding-bottom: 20px;
+				@include sidebar-border-bottom;
+
+			}
+
+	}
+}
+
+// About 
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.about-header {
+	height: 60vh;
+	width: 100%;
+	background-position: 20%;
+	color: $white;
+
+
+	.about-header-content {
+		@include vertical-align;
+	}
+
+	p {
+		color: $white;
+		font-size: 1.2;
+	}
+
+}
+
+.about-intro {
+	h5 {
+		@media (min-width: 992px) {
+			text-align: left;
+		}
+	}
+}
+
+.recent-projects {
+	.image-block-content {
+		@media (min-width: 992px) {
+			height: 70px;
+		}
+
+	}
+
+	h3 {
+		font-size: 2.2rem;
+	}
+
+
+	.image-block-background-image {
+		height: 238px;
+	}
+
+}
+
+
+// Footer 
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.site-footer {
+	background: $light-grey;
+	padding: 8px 0 4px 0;
+	text-align: center;
+	@media (min-width: 992px) {
+		text-align: left;
+	}
+	p {
+		font-family: $font-primary-book;
+		font-size: 1.0rem;
+		letter-spacing: 0.1rem;
+		text-transform: inherit;
+		margin-bottom: 0;
+		margin: 0 15px;
+	}
+}
+// li.current_page_item a {
+// 	color: $black;
+// }

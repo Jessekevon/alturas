@@ -25,5 +25,8 @@
     "animate.sass": "*",
     "compass": "~0.5.4",
     "susy": "~2.2.5"
+  },
+  "dependencies": {
+    "slick.js": "~1.5.5"
   }
 }

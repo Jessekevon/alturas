@@ -9,32 +9,70 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
 			<?php
 				// Start the Loop.
-				while ( have_posts() ) : the_post();
+				while ( have_posts() ) : the_post(); ?>
 
-					/*
-					 * Include the post format-specific template for the content. If you want to
-					 * use this in a child theme, then include a file called called content-___.php
-					 * (where ___ is the post format) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
+				<?php if (has_post_thumbnail( $post->ID ) ): ?>
+				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+				$image = $image[0]; ?>
 
-					// Previous/next post navigation.
-					twentyfourteen_post_nav();
+					<div class="landing-background-image" style="background: url('<?php echo $image; ?>') no-repeat 50% 50%; background-size:cover">
+					</div>
 
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) {
-						comments_template();
-					}
-				endwhile;
+				<?php endif; ?>
+
+
+					<div class="single-background">
+					  <div class="single-image-content-wrapper">
+					    <h1><?php the_title(); ?></h1>
+					    <p>Sawtooth Mountains, Idaho</p>
+					    <button><p>View Images</p></button>
+					  </div>
+					</div>
+
+					<div class="overlay">
+						<img class="close" src="http://cdn.flaticon.com/png/256/8915.png" alt="" />
+						<div class="slider fade">
+							<?php foreach ($cfs->get('single_post_slider') AS $sps): ?> <!-- open external loop -->
+								<div>
+									<div class="image"><img src="<?php echo $sps['single_post_slider_image']?>"/></div>
+									<p><?php echo $sps['single_post_slider_title']?></p>
+									<div class="slider-info">
+										<p><?php echo $sps['single_post_slider_location']?></p>
+										<p><?php echo $sps['single_post_slider_year']?></p>
+									</div>
+								</div>
+								<?php endforeach ?>
+							</div>
+					</div>
+
+					<div class="wrap body-content">
+					  <div class="intro">
+					    <div class="intro-content">
+					      <h2><?php the_title(); ?></h2>
+					    </div>
+					  </div>
+					  <div class="overview">
+					  	<h3>Overview</h3>
+						  	<?php the_content( $more_link_text, $stripteaser ); ?>
+					  	</div>
+					  <div class="sidebar">
+					  	<h3>Updates</h3>
+					  	<h6>Tom Otterness opens 25 year retrospective at The Institute of Contemporary Art, Boston.</h6>
+					  	<h6>Tom Otterness opens 25 year retrospective at The Institute of Contemporary Art, Boston.</h6>
+					  	<h6>Tom Otterness opens 25 year retrospective at The Institute of Contemporary Art, Boston.</h6>
+					  	<h6>Tom Otterness opens 25 year retrospective at The Institute of Contemporary Art, Boston.</h6>
+					  </div>
+					</div>
+
+
+
+
+
+
+				<?php endwhile;
 			?>
-		</div><!-- #content -->
-	</div><!-- #primary -->
 
 <?php
-get_sidebar( 'content' );
-get_sidebar();
 get_footer();
