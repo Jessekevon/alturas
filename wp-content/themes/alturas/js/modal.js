@@ -5,7 +5,7 @@
  *
  */
 ( function( $ ) {
-	$('button').click(function(e) {
+	$('.trigger-overlay').click(function(e) {
 	  $('.overlay').addClass('active');
 	  e.preventDefault();
 	});

@@ -24,21 +24,25 @@
     cursor: pointer;
     position: absolute;
     display: block;
-    width: 16px;
+    height: 45px;
+    width: 47px;
     top: 5px;
-    right: 18px;
+    right: 5%;
     opacity: 0;
     pointer-events: none;
     transform: translateY(0) translate3d(0, 0, 0) translateZ(0);
     backface-visibility: hidden;
-    transition: opacity .5s, transform .5s;
-    transition-delay: .45s;
-  }
-    img.close {
-      pointer-events: auto;
-      transform: translateY(60px);
-      opacity: 1;
+    transition: opacity .3s, transform .3s;
+    pointer-events: auto;
+    transform: translateY(60px);
+    opacity: 1;
+    z-index: 999;
+
+    &:hover {
+      opacity: 0.5;
     }
+
+  }
 
 }
 

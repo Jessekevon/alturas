@@ -9,7 +9,7 @@
 	}),
 
 	$('.fade1').slick({
-	  dots: true,
+	  dots: false,
 	  arrows: false,
 	  infinite: true,
 	  speed: 1500,
@@ -20,7 +20,7 @@
 	}),
 
 	$('.fade2').slick({
-	  dots: true,
+		dots: false,
 	  arrows: false,
 	  infinite: true,
 	  speed: 1500,

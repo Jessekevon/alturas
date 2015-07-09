@@ -1,8 +1,7 @@
 // Buttons
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.button,
-button {
+.button {
   margin-top: 20px;
   display: inline-block;
   width: 156px;
@@ -51,8 +50,7 @@ input {
   }
 }
 
-.button:hover,
-button:hover {
+.button:hover {
   background: $black;
   color: $white;
   border-color: $black;
@@ -60,8 +58,7 @@ button:hover {
   @include global-transition;
 }
 
-.button:hover,
-button:hover {
+.button:hover  {
   p {
     color: $white;
     @include global-transition;
@@ -79,8 +76,7 @@ input {
   }
 }
 
-.button:focus,
-button:focus {
+.button:focus {
   color: $dark-grey;
   border-color: lighten($dark-grey, 33.3%);
   outline: 0;
@@ -96,8 +92,7 @@ input {
   }
 }
 
-.button.button-primary,
-button.button-primary {
+.button.button-primary {
   color: #fff;
   background-color: $primary-color;
   border-color: $primary-color;
@@ -113,8 +108,7 @@ input {
   }
 }
 
-.button.button-primary:hover,
-button.button-primary:hover {
+.button.button-primary:hover {
   color: #fff;
   background-color: $link-color;
   border-color: $link-color;
@@ -130,8 +124,7 @@ input {
   }
 }
 
-.button.button-primary:focus,
-button.button-primary:focus {
+.button.button-primary:focus {
   color: #fff;
   background-color: $link-color;
   border-color: $link-color;

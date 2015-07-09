@@ -27,16 +27,17 @@ get_header(); ?>
 					  <div class="single-image-content-wrapper">
 					    <h1><?php the_title(); ?></h1>
 					    <p>Sawtooth Mountains, Idaho</p>
-					    <button><p>View Images</p></button>
+					    <p class="button trigger-overlay">View Images</p></button>
 					  </div>
 					</div>
 
 					<div class="overlay">
-						<img class="close" src="http://cdn.flaticon.com/png/256/8915.png" alt="" />
+						<img class="close" src="http://localhost:8888/alturas/wp-content/uploads/2015/07/x.png" alt="" />
 						<div class="slider fade">
 							<?php foreach ($cfs->get('single_post_slider') AS $sps): ?> <!-- open external loop -->
 								<div>
-									<div class="image"><img src="<?php echo $sps['single_post_slider_image']?>"/></div>
+
+									<div class="image" style="background: url('<?php echo $sps['single_post_slider_image']?>') no-repeat 50% 50%; background-size:cover"></div>
 									<p><?php echo $sps['single_post_slider_title']?></p>
 									<div class="slider-info">
 										<p><?php echo $sps['single_post_slider_location']?></p>

@@ -671,3 +671,26 @@ flush_rewrite_rules();
 
 // Hook into the 'init' action
 add_action( 'init', 'exhibition_support_post_type', 0 );
+
+
+
+function wp_nav_menu_no_ul()
+{
+    $options = array(
+        'echo' => false,
+        'container' => false,
+        'theme_location' => 'primary',
+        'fallback_cb'=> 'default_page_menu'
+    );
+
+    $menu = wp_nav_menu($options);
+    echo preg_replace(array(
+        '#^<ul[^>]*>#',
+        '#</ul>$#'
+    ), '', $menu);
+
+}
+
+function default_page_menu() {
+   wp_list_pages('title_li=');
+} 
