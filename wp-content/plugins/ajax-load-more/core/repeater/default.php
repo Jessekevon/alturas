@@ -1,9 +1,21 @@
-<li<?php if (! has_post_thumbnail() ) { echo ' class="no-img"'; } ?>>
-   <?php if ( has_post_thumbnail() ) { the_post_thumbnail(array(150,150));
-   }?>
-   <h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
-   <p class="entry-meta">
-       <?php the_time("F d, Y"); ?>
-   </p>
-   <?php the_excerpt(); ?>
-</li>
+<?php if (has_post_thumbnail( $post->ID ) ):
+  $imagebottom = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+  $imagebottom = $imagebottom[0]; 
+  endif; ?>
+
+
+<div class="col2 image-block">
+        <a href="<?php the_permalink(); ?>">
+          <div class="image-block-background-image-wrapper">
+            <div class="image-block-background-image" style="background: url('<?php echo $imagebottom; ?>') no-repeat 50% 50%; background-size:cover">
+            </div>
+
+          </div>
+      </a>
+        <div class="image-block-content">
+          <div class="image-block-content-inner">
+            <h3><?php the_title(); ?></h3>
+            <p>2013 - 2014</p>
+          </div>
+        </div>
+    </div>

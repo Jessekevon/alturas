@@ -20,7 +20,7 @@ get_header(); ?>
 <?php
   $args = array(
     'post_type' => 'artist_residence',
-    'posts_per_page' => 7,
+    'posts_per_page' => 5,
     'orderby' => 'date',
     'order' => 'asc',
     'paged' => ( get_query_var('paged') ? get_query_var('paged') : 1),
@@ -62,6 +62,7 @@ get_header(); ?>
   $imagebottom = $imagebottom[0]; 
   endif; ?>
 
+
     <div class="col2 image-block">
         <a href="<?php the_permalink(); ?>">
           <div class="image-block-background-image-wrapper">
@@ -83,6 +84,11 @@ get_header(); ?>
 
 
 <?php endwhile;?>
+
+
+<!-- Begin Load More Posts -->
+<!-- Offset by 7 so we can load the first seven quering the 'featured post' on top. Then calling up the posts to be displayed after the first seven. -->
+    <?php echo do_shortcode('[ajax_load_more post_type="artist_residence" order="ASC" offset="5" posts_per_page="2" pause="true" scroll="false" transition="fade"]'); ?>
 
 </div>
 
