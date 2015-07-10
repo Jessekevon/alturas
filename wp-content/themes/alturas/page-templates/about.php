@@ -8,6 +8,9 @@
  */
 
 get_header(); ?>
+<?php
+  // Start the Loop.
+  while ( have_posts() ) : the_post(); ?>
 
 <div class="about-header" style="background: url(<?php echo $cfs->get('about_page_header_image'); ?>) no-repeat 50% 90%; background-size:cover">
   <div class="wrap about-header-content">
@@ -21,9 +24,13 @@ get_header(); ?>
   <div class="intro about-intro">
     <div class="intro-content">
       <h2>Overview</h2>
-      <h5>The Artist in Residence Program selects artists to explore and reflect their vision of American culture. Alturas Foundation grants support to one artist or artist collective at a time enabling them to examine in-depth their new ideas and creative process.</h5>
+      <?php echo get_the_content() ?>
     </div>
   </div>
+
+    <?php endwhile;
+  ?>
+
 
   <div class="intro secondary-intro">
     <div class="intro-content">
@@ -48,10 +55,12 @@ get_header(); ?>
 
 <div class="recent-projects">
   <div class="col3 image-block">
+    <a href="<?php the_permalink(); ?>">
     <div class="image-block-background-image-wrapper">
       <div class="image-block-background-image" style="background: url('<?php echo $imageabout; ?>') no-repeat 50% 50%; background-size:cover">
       </div>
     </div>
+  </a>
       <div class="image-block-content">
         <div class="image-block-content-inner">
           <h3><?php the_title(); ?></h3>

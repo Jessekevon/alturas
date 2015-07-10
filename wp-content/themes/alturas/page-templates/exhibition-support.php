@@ -12,8 +12,8 @@ get_header(); ?>
   <div class="wrap">
     <div class="intro">
       <div class="intro-content">
-        <h1>Exhibition Support</h1>
-        <h5>Alturas Foundation stimulates public dialogue on American culture by supporting public installations of art works from its collection. Beginning in 2001, the Foundation has installed works of art in communities from New York to California.</h5>
+        <h1><?php the_title(); ?></h1>
+        <h5><?php echo $cfs->get('post_type_page_template_intro_text'); ?></h5>
       </div>
     </div>
   </div>
@@ -42,18 +42,21 @@ get_header(); ?>
   $imagebottom = $imagebottom[0]; 
   endif; ?>
 
-    <div class="col2 image-block">
-      <div class="image-block-background-image-wrapper">
-        <div class="image-block-background-image" style="background: url('<?php echo $imagebottom; ?>') no-repeat 50% 50%; background-size:cover">
+  <div class="col2 image-block">
+      <a href="<?php the_permalink(); ?>">
+        <div class="image-block-background-image-wrapper">
+          <div class="image-block-background-image" style="background: url('<?php echo $imagebottom; ?>') no-repeat 50% 50%; background-size:cover">
+          </div>
+
+        </div>
+    </a>
+      <div class="image-block-content">
+        <div class="image-block-content-inner">
+          <h3><?php the_title(); ?></h3>
+          <p>2013 - 2014</p>
         </div>
       </div>
-        <div class="image-block-content">
-          <div class="image-block-content-inner">
-            <h3><?php the_title(); ?></h3>
-            <p>2013 - 2014</p>
-          </div>
-        </div>
-    </div>
+  </div>
 
 <?php endwhile;?>
 

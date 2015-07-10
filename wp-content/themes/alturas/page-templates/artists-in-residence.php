@@ -11,8 +11,8 @@ get_header(); ?>
 <div class="wrap">
   <div class="intro">
     <div class="intro-content">
-      <h1>Artists in Residence</h1>
-      <h5>The Artist in Residence Program selects artists to explore and reflect their vision of American culture. Alturas Foundation grants support to one artist or artist collective at a time enabling them to examine in-depth their new ideas and creative process.</h5>
+      <h1><?php the_title(); ?></h1>
+      <h5><?php echo $cfs->get('post_type_page_template_intro_text'); ?></h5>
     </div>
   </div>
 </div>
@@ -87,7 +87,7 @@ get_header(); ?>
 
 
 <!-- Begin Load More Posts -->
-<!-- Offset by 7 so we can load the first seven quering the 'featured post' on top. Then calling up the posts to be displayed after the first seven. -->
+<!-- Offset by 5 so we can load the first seven quering the 'featured post' on top. Then calling up the posts to be displayed after the first seven. -->
     <?php echo do_shortcode('[ajax_load_more post_type="artist_residence" order="ASC" offset="5" posts_per_page="2" pause="true" scroll="false" transition="fade"]'); ?>
 
 </div>
