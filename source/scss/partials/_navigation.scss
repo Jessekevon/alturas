@@ -19,7 +19,7 @@ Main components
   -moz-transition: -moz-transform 0.3s;
   transition: transform 0.3s;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1024px) {
   .cd-main-content.nav-is-visible, .cd-main-header.nav-is-visible {
     -webkit-transform: translateX(340px);
     -moz-transform: translateX(340px);
@@ -42,8 +42,12 @@ Main components
 }
 
 .cd-main-header {
-  height: 50px;
+  height: 60px;
   background: #ffffff;
+
+  @media (max-width: 1024px) {
+    text-align: center;
+  }
   // z-index: 3;
 }
 .nav-is-fixed .cd-main-header {
@@ -53,7 +57,7 @@ Main components
   left: 0;
   width: 100%;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1025px) {
   .cd-main-header {
     height: 72px;
     background: transparent;
@@ -75,6 +79,7 @@ Main components
   /* hide text */
   color: transparent;
   z-index: 3;
+  top: 10px;
 }
 
 .cd-search-trigger::before, .cd-search-trigger::after {
@@ -96,7 +101,7 @@ Main components
 
 .cd-nav-trigger.nav-is-visible {
   position: fixed;
-  top: 3px;
+  top: 10px;
 }
 .cd-search-trigger::before {
   /* lens */
@@ -259,7 +264,7 @@ Main components
   -o-transform: translateX(4px) translateY(2px) rotate(-45deg);
   transform: translateX(4px) translateY(2px) rotate(-45deg);
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1025px) {
   .cd-nav-trigger {
     display: none;
   }
@@ -267,7 +272,7 @@ Main components
 
 .cd-primary-nav, .cd-primary-nav ul {
   position: fixed;
-  top: 50px;
+  top: 60px;
   margin: 0;
   left: 0;
   height: 100%;
@@ -333,7 +338,7 @@ Main components
   opacity: 0;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1024px) {
   .nav-on-left .cd-primary-nav, .nav-on-left .cd-primary-nav ul {
     right: auto;
     left: 0;
@@ -411,7 +416,7 @@ Main components
 .cd-primary-nav .cd-nav-icons .cd-nav-item.item-8::before {
   background-image: url("../img/line-icon-8.svg");
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1024px) {
   .cd-primary-nav {
     /* by default .cd-primary-nav is hidden - trick for iOS devices where you can see the navigation if you pull down */
     visibility: hidden;
@@ -428,7 +433,7 @@ Main components
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1025px) {
   .cd-primary-nav {
     position: relative;
     padding: 0 150px 0 0;
@@ -500,7 +505,7 @@ Main components
     transition: color 0.3s, box-shadow 0.3s;
   }
   .cd-primary-nav > li > a:hover {
-    color: #69aa6f;
+    color: $link-gray;
   }
   .cd-primary-nav > li > a.selected {
     color: #69aa6f;
@@ -609,7 +614,7 @@ Main components
     font-size: 1.4rem;
   }
   .cd-primary-nav .cd-secondary-nav a:hover {
-    color: #69aa6f;
+    color: $link-gray;
   }
   .cd-primary-nav .cd-secondary-nav ul {
     /* Force Hardware Acceleration in WebKit */
@@ -743,9 +748,13 @@ Main components
 .cd-header-buttons {
   position: absolute;
   z-index: 99;
+  position: absolute;
+  z-index: 99;
+  margin: 0 auto;
+  padding: 0;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1025px) {
   .has-children > a::before, .has-children > a::after, .go-back a::before, .go-back a::after {
     background: #c9cbc4;
   }
@@ -795,11 +804,23 @@ Main components
 }
 
 .cd-main-header {
+
   img {
-    position: relative;
-    top: 15px;
-    height: 40px;
+    top: 5px;
+    height: 30px;
     width: auto;
+    position: relative;
+
+    @media (min-width: 1025px) {
+      top: 15px;
+      height: 40px;
+    }
+  }
+}
+
+li.current-menu-item {
+  a {
+    color: $link-gray;
   }
 }
 

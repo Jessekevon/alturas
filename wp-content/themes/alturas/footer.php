@@ -9,11 +9,6 @@
  * @since Twenty Fourteen 1.0
  */
 ?>
-<nav class="cd-nav">
-	<ul id="cd-primary-nav" class="cd-primary-nav is-fixed">
-		<?php  wp_nav_menu_no_ul(); ?>
-	</ul> <!-- primary-nav -->
-</nav> <!-- cd-nav -->
 
 
 				<footer id="colophon" class="site-footer" role="contentinfo">

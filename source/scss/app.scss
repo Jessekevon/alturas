@@ -26,6 +26,9 @@
 // html is set to 62.5% so that all the REM measurements throughout Skeleton
 // are based on 10px sizing. So basically 1.5rem = 15px :)
 
+html, body, #page, .cd-main-content, #main, {
+	height: 100%;
+}
 html {
   font-size: 62.5%;
 }
@@ -58,17 +61,27 @@ body {
   margin: 0;
   float: left;
   position: relative;
-  // @include scale_1;
-
-  // &:hover {
-  // 	@include scale
-  // }
 }
 
 @media (min-width: 992px){
   .landing-background-image  {
     width: 50%;
     height: 100vh;
+  }
+
+  // This is sketchy
+
+  .home {
+  	.landing-background-image  {
+  	  width: 100%;
+  	  height: 100vh;
+  	  @include scale_1;
+
+  	  &:hover {
+  	  	@include scale
+  	  }
+
+  	}
   }
 }
 
@@ -175,11 +188,11 @@ body {
 .image-block-background-image {
 	height: 367px;
 
-	// @include scale_1;
+	@include scale_1;
 
-	// &:hover {
-	// 	@include scale
-	// }
+	&:hover {
+		@include scale
+	}
 
 }
 
@@ -210,9 +223,13 @@ body {
 	.image-block-content-inner {
 		@include vertical-align;
 	}
-
-
 }
+
+
+.image-block-background-image-wrapper {
+	overflow: hidden;
+}
+
 
 .single-background {
 	position: relative;
@@ -259,6 +276,10 @@ right: 0;
 				@include push(1);
 				margin-bottom: 0;
 			}
+
+			a {
+				letter-spacing: 0.1rem;
+			}
 	}
 
 	.sidebar {
@@ -277,6 +298,55 @@ right: 0;
 			}
 
 	}
+}
+
+
+// Post Navigation 
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+.project-info-box {
+	margin-top: 120px;
+	display: block;
+	height: 127px;
+	@include border;
+	#single-nav-right {
+		border-left: 1px solid $black;
+	}
+	.col2 {
+		text-align: center;
+		height: 127px;
+		@include flush;
+	}
+
+	span {
+		position: relative;
+		display: inline-block;
+		margin: 30px 0 5px 0;
+		font-size: 2.2rem;
+		font-family: $font-primary;
+		text-transform: initial;
+	}
+
+}
+
+.project-info-box {
+	a {
+		height: 127px;
+		text-align: center;
+		display: inline-block;
+		width: 100%;
+		font-size: 1.3rem;
+		font-family: $font-primary-circular;
+		text-transform: uppercase;
+		letter-spacing: 0.4rem;
+	}
+}
+
+// .post-nav-content {
+// 	@include vertical-align;
+// }
+
+#nav-below {
+  display: none;
 }
 
 // About 

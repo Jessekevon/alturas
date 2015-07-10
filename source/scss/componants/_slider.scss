@@ -134,7 +134,7 @@ $slick-prev-character: "←" !default;
 $slick-next-character: "→" !default;
 $slick-dot-character: "•" !default;
 $slick-dot-size: 6px !default;
-$slick-opacity-default: 0.75 !default;
+$slick-opacity-default: 0.5 !default;
 $slick-opacity-on-hover: 1 !default;
 $slick-opacity-not-active: 0.25 !default;
 
@@ -202,6 +202,7 @@ $slick-opacity-not-active: 0.25 !default;
 
 .slick-prev {
     left: -25%;
+    @include global-transition;
     [dir="rtl"] & {
         left: auto;
         right: -25%;
@@ -214,10 +215,15 @@ $slick-opacity-not-active: 0.25 !default;
         height: 60px;
         background-size: 40px;
         }
+    &:hover {
+        opacity: $slick-opacity-default;
+        @include global-transition;
+    }    
 }
 
 .slick-next {
     right: -25%;
+    @include global-transition;
     [dir="rtl"] & {
         left: -25%;
         right: auto;
@@ -230,6 +236,11 @@ $slick-opacity-not-active: 0.25 !default;
         height: 60px;
         background-size: 40px;
     }
+    &:hover {
+        opacity: $slick-opacity-default;
+        @include global-transition;
+    }    
+
 }
 
 /* Dots */

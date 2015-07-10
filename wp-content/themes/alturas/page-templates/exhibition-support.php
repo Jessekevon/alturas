@@ -43,8 +43,10 @@ get_header(); ?>
   endif; ?>
 
     <div class="col2 image-block">
+      <div class="image-block-background-image-wrapper">
         <div class="image-block-background-image" style="background: url('<?php echo $imagebottom; ?>') no-repeat 50% 50%; background-size:cover">
         </div>
+      </div>
         <div class="image-block-content">
           <div class="image-block-content-inner">
             <h3><?php the_title(); ?></h3>

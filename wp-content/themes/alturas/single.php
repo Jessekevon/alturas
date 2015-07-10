@@ -37,7 +37,7 @@ get_header(); ?>
 							<?php foreach ($cfs->get('single_post_slider') AS $sps): ?> <!-- open external loop -->
 								<div>
 
-									<div class="image" style="background: url('<?php echo $sps['single_post_slider_image']?>') no-repeat 50% 50%; background-size:cover"></div>
+									<div class="image b-lazy" style="background: url('<?php echo $sps['single_post_slider_image']?>') no-repeat 50% 50%; background-size:cover"></div>
 									<p><?php echo $sps['single_post_slider_title']?></p>
 									<div class="slider-info">
 										<p><?php echo $sps['single_post_slider_location']?></p>
@@ -67,9 +67,15 @@ get_header(); ?>
 					  </div>
 					</div>
 
-
-
-
+						<div class="project-info-box">
+							<div class="col2" id="single-nav-left">
+								<?php next_post('%', '<span>Next Artist</span> </br></span>'); ?>
+							</div>
+							<div class="col2" id="single-nav-right">
+								<?php previous_post('%', '<span>Previous Artist</span> </br></span>'); ?>
+							</div>
+						</div>
+ 
 
 
 				<?php endwhile;

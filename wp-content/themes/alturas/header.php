@@ -33,6 +33,13 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 
+	<nav class="cd-nav">
+		<ul id="cd-primary-nav" class="cd-primary-nav is-fixed">
+			<?php  wp_nav_menu_no_ul(); ?>
+		</ul> <!-- primary-nav -->
+	</nav> <!-- cd-nav -->
+
+
 <ul class="cd-header-buttons">
 <li><a class="cd-nav-trigger" href="#cd-primary-nav">Menu<span></span></a></li>
 </ul> <!-- cd-header-buttons -->
@@ -41,6 +48,7 @@
 
 <a class="cd-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="http://localhost:8888/alturas/wp-content/uploads/2015/07/alturaslogo.png" alt="Logo"></a>
 </header>
+
 
 <main class="cd-main-content">
 <!-- your content here -->
