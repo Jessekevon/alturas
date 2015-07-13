@@ -1,0 +1,52 @@
+// Ajax Load More 
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+#ajax-load-more {
+  float: left;
+  width: 100%;
+}
+
+button.alm-load-more-btn {
+  font-family: $font-primary-book;
+  margin-top: 20px;
+  display: inline-block;
+  width: 156px;
+  padding: 0;
+  height: 59px;
+  line-height: 59px;
+  color: #555555;
+  text-align: center;
+  font-size: 1.1rem;
+  letter-spacing: .5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 1px solid #000;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 0;
+  text-transform: uppercase;
+
+  @include global-transition;
+
+  &:hover {
+    background: $black;
+    color: $white;
+    border-color: $black;
+    outline: 0;
+    @include global-transition;
+  }
+}
+
+
+button.alm-load-more-btn:active, button.alm-load-more-btn:focus {
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  text-decoration: none;
+}
+
+button.alm-load-more-btn.done {
+  display: none;
+}

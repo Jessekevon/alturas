@@ -27,18 +27,18 @@ var AUTOPREFIXER_BROWSERS = [
 
 gulp.task('styles', function() {
 	return gulp.src(PATHS.scss)
-		.pipe(plugins.sourcemaps.init())
+		// .pipe(plugins.sourcemaps.init())
 		.pipe(plugins.changed(PATHS.dist + 'css', {extension: 'css'}))
 		.pipe(plugins.sass({
 			precision: 10,
-			// outputStyle: 'compressed',
-			outputStyle: 'expanded',
+			outputStyle: 'compressed',
+			// outputStyle: 'expanded',
 			onError: console.error.bind(console, 'Sass error:')
 		}))
 		.pipe(plugins.autoprefixer({
 			browsers: AUTOPREFIXER_BROWSERS
 		}))
-		.pipe(plugins.sourcemaps.write())
+		// .pipe(plugins.sourcemaps.write())
 		.pipe(gulp.dest(PATHS.dist + 'css'))
 		.pipe(plugins.size({
 			title: 'styles'

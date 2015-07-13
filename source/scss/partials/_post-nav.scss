@@ -1,0 +1,55 @@
+// Post Navigation 
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+.project-info-box {
+  margin-top: 120px;
+  display: block;
+  height: 127px;
+  @include border;
+  #single-nav-right {
+    border-left: 1px solid $black;
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 60px;
+  }
+
+  .col2 {
+    text-align: center;
+    height: 127px;
+    @include flush;
+  }
+
+  span {
+    position: relative;
+    display: inline-block;
+    margin: 30px 0 5px 0;
+    font-size: 2.2rem;
+    font-family: $font-primary;
+    text-transform: initial;
+  }
+
+}
+
+.project-info-box {
+  a {
+    height: 127px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    font-size: 1.3rem;
+    font-family: $font-primary-circular;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    @include global-transition;
+
+    &:hover {
+      background: $black;
+      color: $white;
+      @include global-transition;
+    }
+  }
+}
+
+#nav-below {
+  display: none;
+}

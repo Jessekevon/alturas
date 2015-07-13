@@ -45,7 +45,7 @@ get_header(); ?>
           <a class="button" href="<?php the_permalink(); ?>"><p>View More</p></a>
         </div>
       </div>
-      <div class="col2 feature-block" style="background: url('<?php echo $imagetop; ?>') no-repeat 50% 50%; background-size:cover">
+      <div class="col2 feature-block fadeIn" style="background: url('<?php echo $imagetop; ?>') no-repeat 50% 50%; background-size:cover">
       </div>
   </div>
 </div>
@@ -66,7 +66,7 @@ get_header(); ?>
     <div class="col2 image-block">
         <a href="<?php the_permalink(); ?>">
           <div class="image-block-background-image-wrapper">
-            <div class="image-block-background-image" style="background: url('<?php echo $imagebottom; ?>') no-repeat 50% 50%; background-size:cover">
+            <div class="image-block-background-image fadeIn" style="background: url('<?php echo $imagebottom; ?>') no-repeat 50% 50%; background-size:cover">
             </div>
 
           </div>

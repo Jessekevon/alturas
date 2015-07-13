@@ -1,1 +1,46 @@
 // About specific styles
+
+.about-header {
+	height: 60vh;
+	width: 100%;
+	background-position: 20%;
+	color: $white;
+	display: inline-block;
+
+	.about-header-content {
+		@include vertical-align;
+	}
+
+	p {
+		color: $white;
+		font-size: 1.2;
+	}
+
+}
+
+.about-intro {
+	h5 {
+		@media (min-width: 992px) {
+			text-align: left;
+		}
+	}
+}
+
+.recent-projects {
+	.image-block-content {
+		@media (min-width: 992px) {
+			height: 70px;
+		}
+
+	}
+
+	h3 {
+		font-size: 2.2rem;
+	}
+
+
+	.image-block-background-image {
+		height: 238px;
+	}
+
+}

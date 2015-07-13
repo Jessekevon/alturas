@@ -12,7 +12,7 @@ get_header(); ?>
   // Start the Loop.
   while ( have_posts() ) : the_post(); ?>
 
-<div class="about-header" style="background: url(<?php echo $cfs->get('about_page_header_image'); ?>) no-repeat 50% 90%; background-size:cover">
+<div class="about-header fadeIn" style="background: url(<?php echo $cfs->get('about_page_header_image'); ?>) no-repeat 50% 90%; background-size:cover">
   <div class="wrap about-header-content">
     <h1><?php echo $cfs->get('about_page_header_text'); ?></h1>
     <p><?php echo $cfs->get('about_page_location_text'); ?></p>
@@ -57,7 +57,7 @@ get_header(); ?>
   <div class="col3 image-block">
     <a href="<?php the_permalink(); ?>">
     <div class="image-block-background-image-wrapper">
-      <div class="image-block-background-image" style="background: url('<?php echo $imageabout; ?>') no-repeat 50% 50%; background-size:cover">
+      <div class="image-block-background-image fadeIn" style="background: url('<?php echo $imageabout; ?>') no-repeat 50% 50%; background-size:cover">
       </div>
     </div>
   </a>

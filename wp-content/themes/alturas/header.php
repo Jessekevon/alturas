@@ -46,7 +46,7 @@
 
 <header class="cd-main-header">
 
-<a class="cd-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="http://localhost:8888/alturas/wp-content/uploads/2015/07/alturaslogo.png" alt="Logo"></a>
+	<a class="cd-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="http://alturas-foundation.flywheelsites.com/wp-content/uploads/2015/07/alturaslogo1.png" alt="Logo"></a>
 </header>
 
 

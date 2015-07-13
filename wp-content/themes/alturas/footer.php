@@ -21,6 +21,7 @@
 </div><!-- #page -->
 
 	<?php wp_footer(); ?>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/fade-in.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/site-navigation.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/modal.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/slick.js"></script>

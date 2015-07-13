@@ -45,7 +45,7 @@ get_header(); ?>
   <div class="col2 image-block">
       <a href="<?php the_permalink(); ?>">
         <div class="image-block-background-image-wrapper">
-          <div class="image-block-background-image" style="background: url('<?php echo $imagebottom; ?>') no-repeat 50% 50%; background-size:cover">
+          <div class="image-block-background-image fadeIn" style="background: url('<?php echo $imagebottom; ?>') no-repeat 50% 50%; background-size:cover">
           </div>
 
         </div>
