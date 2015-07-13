@@ -1,17 +1,18 @@
 /* -------------------------------- 
 
+Overflow-X Hidden when mobile nav menu is out 
+
+-------------------------------- */
+
+body.overflow-hidden {
+  overflow-x:hidden;
+  }
+
+/* -------------------------------- 
+
 Main components 
 
 -------------------------------- */
-.cd-main-content, .cd-main-header {
-  /* Force Hardware Acceleration in WebKit */
-  // -webkit-transform: translateZ(0);
-  // -moz-transform: translateZ(0);
-  // -ms-transform: translateZ(0);
-  // -o-transform: translateZ(0);
-  // transform: translateZ(0);
-  // will-change: transform;
-}
 
 .cd-main-content, .cd-main-header {
   position: relative;

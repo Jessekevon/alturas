@@ -694,3 +694,14 @@ function wp_nav_menu_no_ul()
 function default_page_menu() {
    wp_list_pages('title_li=');
 } 
+
+
+add_action( 'wp_enqueue_scripts', 'enqueue_theme_css' );
+
+function enqueue_theme_css()
+{
+    wp_enqueue_style(
+        'default',
+        get_template_directory_uri() . '/dist/css/app.css'
+    );
+}

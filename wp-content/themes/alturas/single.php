@@ -76,6 +76,15 @@ get_header(); ?>
 							</div>
 						</div>
  
+<!--  <div class="project-info-box">
+ 	<div class="col2" id="single-nav-left">
+ 		<?php c2c_next_or_loop_post_link('%', '<span>Next Artist</span> </br></span>'); ?>
+ 	</div>
+ 	<div class="col2" id="single-nav-right">
+ 		<?php c2c_previous_or_loop_post_link('%', '<span>Previous Artist</span> </br></span>'); ?>
+ 	</div>
+ </div>
+ -->
 
 
 				<?php endwhile;
