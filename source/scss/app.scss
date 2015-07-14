@@ -242,3 +242,9 @@ body {
 position: absolute;
 right: 0;
 }
+
+// Wrapper around background images that provide a background color before background image div is loaded
+
+.background-color {
+	background-color: $light-grey;
+}
