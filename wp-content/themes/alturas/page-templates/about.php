@@ -11,11 +11,12 @@ get_header(); ?>
 <?php
   // Start the Loop.
   while ( have_posts() ) : the_post(); ?>
-
-<div class="about-header fadeIn" style="background: url(<?php echo $cfs->get('about_page_header_image'); ?>) no-repeat 50% 90%; background-size:cover">
-  <div class="wrap about-header-content">
-    <h1><?php echo $cfs->get('about_page_header_text'); ?></h1>
-    <p><?php echo $cfs->get('about_page_location_text'); ?></p>
+<div class="background-color">
+  <div class="about-header fadeIn" style="background: url(<?php echo $cfs->get('about_page_header_image'); ?>) no-repeat 50% 90%; background-size:cover">
+    <div class="wrap about-header-content">
+      <h1><?php echo $cfs->get('about_page_header_text'); ?></h1>
+      <p><?php echo $cfs->get('about_page_location_text'); ?></p>
+    </div>
   </div>
 </div>
 

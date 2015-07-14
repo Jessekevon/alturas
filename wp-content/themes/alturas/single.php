@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-
+<div class="single-top">
 			<?php
 				// Start the Loop.
 				while ( have_posts() ) : the_post(); ?>
@@ -47,7 +47,7 @@ get_header(); ?>
 								<?php endforeach ?>
 							</div>
 					</div>
-
+</div>
 					<div class="wrap body-content">
 					  <div class="intro">
 					    <div class="intro-content">
