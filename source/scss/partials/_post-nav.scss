@@ -8,6 +8,9 @@
   #single-nav-right {
     border-left: 1px solid $black;
   }
+  #single-nav-left {
+    margin-left: -1px; // to balance out the 1px border beside it and also maintain 50 / 50 layout
+  }
 
   @media (max-width: 767px) {
     margin-top: 60px;
@@ -16,6 +19,7 @@
   .col2 {
     text-align: center;
     height: 127px;
+    width: 50%;
     @include flush;
   }
 
@@ -23,9 +27,14 @@
     position: relative;
     display: inline-block;
     margin: 30px 0 5px 0;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
     font-family: $font-primary;
     text-transform: initial;
+    @media (min-width: 768px) {
+      font-size: 2.2rem;
+      letter-spacing: 0.4rem;
+    }
   }
 
 }
@@ -36,7 +45,7 @@
     text-align: center;
     display: inline-block;
     width: 100%;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-family: $font-primary-circular;
     text-transform: uppercase;
     letter-spacing: 0.4rem;
@@ -46,6 +55,10 @@
       background: $black;
       color: $white;
       @include global-transition;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 1.3rem;
     }
   }
 }
