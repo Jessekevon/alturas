@@ -19,7 +19,7 @@ get_header(); ?>
   </div>
 </div>
 
-<div class="wrap">
+<div class="wrap bottom-feature">
 
   <div class="intro about-intro">
     <div class="intro-content">

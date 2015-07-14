@@ -160,6 +160,12 @@ body {
 		}
 	}
 
+.bottom-feature {
+	@media (max-width: 767px) {
+		padding: 0 10px;
+	}
+}	
+
 
 // Image Block 
 //––––––––––––––––––––––––––––––––––––––––––––––––––
