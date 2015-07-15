@@ -38,7 +38,19 @@
 				margin-bottom: 0;
 			}
 
+			a {
+				&:hover {
+
+					h6 {
+						@include global-transition;
+						color: $link-gray;
+
+					}
+				}
+			}
+
 			h6 {
+				@include global-transition;
 				margin-bottom: 20px;
 				padding-bottom: 20px;
 				@include sidebar-border-bottom;

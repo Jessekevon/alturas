@@ -60,10 +60,9 @@ get_header(); ?>
 					  	</div>
 					  <div class="sidebar">
 					  	<h3>Updates</h3>
-					  	<h6>Tom Otterness opens 25 year retrospective at The Institute of Contemporary Art, Boston.</h6>
-					  	<h6>Tom Otterness opens 25 year retrospective at The Institute of Contemporary Art, Boston.</h6>
-					  	<h6>Tom Otterness opens 25 year retrospective at The Institute of Contemporary Art, Boston.</h6>
-					  	<h6>Tom Otterness opens 25 year retrospective at The Institute of Contemporary Art, Boston.</h6>
+					  	<?php foreach ($cfs->get('sidebar_item') AS $sidebar): ?>
+						  	<a href="<?php echo $sidebar['sidebar_link_location']?>"><h6><?php echo $sidebar['sidebar_content']?></h6></a>
+					  	<?php endforeach ?>
 					  </div>
 					</div>
 

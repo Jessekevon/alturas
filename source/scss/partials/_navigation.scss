@@ -48,6 +48,9 @@ Main components
 
   @media (max-width: 1024px) {
     text-align: center;
+    margin-bottom: -60px;
+    z-index: 9;
+
   }
   // z-index: 3;
 }
@@ -61,7 +64,6 @@ Main components
 @media only screen and (min-width: 1025px) {
   .cd-main-header {
     height: 72px;
-    background: transparent;
   }
   .cd-main-header::after {
     clear: both;
@@ -675,4 +677,26 @@ li.current-menu-item {
   a {
     color: $link-gray;
   }
+}
+
+// This could be a bad idea
+
+
+@media (min-width: 1025px) {
+  .home  {
+    .cd-main-header {
+      position: absolute;
+    }
+    .cd-nav {
+      position: absolute;
+      background-color: #fff;
+      width: 100%;
+      z-index: 9;
+    }
+
+    .cd-logo {
+      z-index: 9;
+    }
+  }
+
 }
