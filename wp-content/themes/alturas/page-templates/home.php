@@ -20,7 +20,9 @@ get_header(); ?>
     <a href="<?php echo get_permalink($post_id_left); ?>"><div class="landing-background-image homepage-landing-image fadeIn" style="background: url(<?php echo $background_left['0']?>) no-repeat 50% 50%; background-size:cover">
       <div class="image-content-wrapper">
         <h2><?php echo get_the_title($post_id_left); ?></h2>
-        <p>Artist In Residence</p>
+        <p><?php $post_type = get_post_type_object( get_post_type($post_id_left) );
+
+        echo $post_type->label ; ?></p>
       </div>
     </div></a>
   <?php endforeach; ?>
@@ -34,7 +36,9 @@ get_header(); ?>
     <a href="<?php echo get_permalink($post_id_right); ?>"><div class="landing-background-image fadeIn" style="background: url(<?php echo $background_right['0']?>) no-repeat 50% 50%; background-size:cover">
       <div class="image-content-wrapper">
         <h2><?php echo get_the_title($post_id_right); ?></h2>
-        <p>Artist In Residence</p>
+        <p><?php $post_type = get_post_type_object( get_post_type($post_id_right) );
+
+        echo $post_type->label ; ?></p>
       </div>
     </div></a>
   <?php endforeach; ?>

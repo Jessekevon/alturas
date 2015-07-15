@@ -41,7 +41,9 @@ get_header(); ?>
       <div class="col2 feature-block">
         <div class="feature-block-content">
           <h2><?php the_title(); ?></h2>
-          <p>Artist In Residence</p>
+        <p><?php $post_type = get_post_type_object( get_post_type($post_id_left) );
+
+        echo $post_type->label ; ?></p>
           <a class="button" href="<?php the_permalink(); ?>"><p>View More</p></a>
         </div>
       </div>
@@ -66,7 +68,7 @@ get_header(); ?>
     <div class="col2 image-block">
         <a href="<?php the_permalink(); ?>">
           <div class="image-block-background-image-wrapper">
-            <div class="image-block-background-image fadeIn" style="background: url('<?php echo $imagebottom; ?>') no-repeat 50% 50%; background-size:cover">
+            <div class="image-block-background-image fadeIn" style="background: url('<?php echo $cfs->get('grid_item_featured_image'); ?>') no-repeat 50% 50%; background-size:cover">
             </div>
 
           </div>
@@ -74,7 +76,7 @@ get_header(); ?>
         <div class="image-block-content">
           <div class="image-block-content-inner">
             <h3><?php the_title(); ?></h3>
-            <p>2013 - 2014</p>
+            <p><?php echo $cfs->get('project_year'); ?></p>
           </div>
         </div>
     </div>
