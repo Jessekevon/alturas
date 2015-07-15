@@ -3,7 +3,7 @@
 
 .site-footer {
   background: $light-grey;
-  padding: 8px 0 4px 0;
+  padding: 12px 0 10px 0;
   text-align: center;
   float: left;
   width: 100%;
@@ -18,4 +18,16 @@
     margin-bottom: 0;
     margin: 0 15px;
   }
+  a {
+    font-size: 1.0rem;
+    letter-spacing: 0.1rem;
+    text-decoration: underline;
+    @include global-transition;
+
+    &:hover {
+      color: $link-gray;
+      @include global-transition;
+    }
+  }
+
 }

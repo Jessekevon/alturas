@@ -57,6 +57,12 @@ get_header(); ?>
 					  <div class="overview">
 					  	<h3>Overview</h3>
 						  	<?php the_content( $more_link_text, $stripteaser ); ?>
+                <div class="text-left">
+                  <a href="<?php echo $cfs->get('left_single_post_link_location'); ?>"><?php echo $cfs->get('left_single_post_link_text'); ?></a>
+                </div>
+                <div class="text-right">
+                  <a href="<?php echo $cfs->get('right_single_post_link_location'); ?>"><?php echo $cfs->get('right_single_post_link_text'); ?></a>
+                </div>
 					  	</div>
 					  <div class="sidebar">
 					  	<h3>Updates</h3>

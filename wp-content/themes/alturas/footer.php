@@ -13,7 +13,7 @@
 
 				<footer id="colophon" class="site-footer" role="contentinfo">
 					<div class="wrap">
-						<p>© 2015 Alturas Foundation. All rights reserved. Website by what.it.is</p>
+						<p>© 2015 Alturas Foundation. All rights reserved. Website by <a href="http://what.it.is/" target="_blank" >what.it.is</a></p>
 					</div>
 				</footer><!-- #colophon -->
 				
