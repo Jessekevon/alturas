@@ -234,6 +234,10 @@ $slick-opacity-not-active: 0.25 !default;
     .slick-slider {
       width: 100%;
       margin: 0 auto;
+
+      p {
+        margin-bottom: 10px;
+      }
     }
 
     .slick-list {
@@ -247,6 +251,7 @@ $slick-opacity-not-active: 0.25 !default;
         transform: none; 
         background-color: $light-grey;
     }
+
 
 @media (min-width: 992px) {
         .slick-list {

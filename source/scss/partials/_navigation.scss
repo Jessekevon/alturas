@@ -421,7 +421,7 @@ Main components
     background: transparent;
     padding: 0;
     top: 0;
-    margin-right: 10px;
+    margin-right: 15px;
   }
   .cd-primary-nav::after {
     clear: both;
@@ -684,19 +684,23 @@ li.current-menu-item {
 
 @media (min-width: 1025px) {
   .home  {
-    .cd-main-header {
-      position: absolute;
-    }
-    .cd-nav {
-      position: absolute;
-      background-color: #fff;
-      width: 100%;
-      z-index: 9;
+      .cd-main-header {
+        position: absolute;
+      }
+      .cd-nav {
+        position: absolute;
+        background-color: #fff;
+        width: 100%;
+        z-index: 9;
+      }
+      .cd-logo {
+        z-index: 9;
+      }
     }
 
-    .cd-logo {
-      z-index: 9;
+  .page-template-artists-in-residence {
+    .cd-main-header {
+      border-bottom: 1px solid #e0e0e0;
     }
   }
-
 }
