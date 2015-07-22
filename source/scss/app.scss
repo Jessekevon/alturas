@@ -244,14 +244,17 @@ li {
   right: 0;
 }
 
-.page-template-artists-in-residence,
-.page-template-public-installations,
-.page-template-exhibition-support,
-.page-template-about {
-  .site-footer {
-    margin-top: 100px;
+@media (min-width: 768px) {
+  .page-template-artists-in-residence,
+  .page-template-public-installations,
+  .page-template-exhibition-support,
+  .page-template-about {
+    .site-footer {
+      margin-top: 100px;
+    }
   }
 }
+
 
 // Wrapper around background images that provide a background color before background image div is loaded
 

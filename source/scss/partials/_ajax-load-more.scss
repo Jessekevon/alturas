@@ -51,3 +51,22 @@ button.alm-load-more-btn:active, button.alm-load-more-btn:focus {
 button.alm-load-more-btn.done {
   display: none;
 }
+
+
+@media (max-width: 767px) {
+  .alm-btn-wrap {
+    padding: 0 0 40px 0;
+  }
+}
+
+// Remove loading gif from load more button 
+
+button.alm-load-more-btn.loading:before {
+  display: none;
+}
+
+// Remove padding added to button when loading gif is visible
+
+button.alm-load-more-btn.loading {
+  padding-left: 26px !important;
+}
