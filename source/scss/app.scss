@@ -207,6 +207,38 @@ li {
   }
 }
 
+// Adjust block styles for weird inbetween breakpoint ie ipad portrait
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .image-block {
+    height: 550px;
+  }
+  .image-block-background-image {
+    height: 330px;
+  }
+  .image-block-content {
+    height: 175px;
+  }
+
+  .image-block-content-inner {
+    margin-top: 40px;
+  }
+
+  .recent-projects {
+    .image-block {
+      height: 400px;
+    }
+    .image-block-content {
+      height: 125px;
+    }
+
+    .image-block-content-inner {
+      margin-top: 50px;
+    }
+
+  }
+}
+
 .image-block-background-image-wrapper {
   overflow: hidden;
 }
