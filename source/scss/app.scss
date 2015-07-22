@@ -28,19 +28,7 @@ body {
   line-height: 1.6;
   font-weight: 400;
   font-family: $font-primary;
-  -webkit-animation: fadein 1.5s;
-  /* Safari, Chrome and Opera > 12.1 */
-  
-  -moz-animation: fadein 1.5s;
-  /* Firefox < 16 */
-  
-  -ms-animation: fadein 1.5s;
-  /* Internet Explorer */
-  
-  -o-animation: fadein 1.5s;
-  /* Opera < 12.1 */
-  
-  animation: fadein 1.5s;
+  opacity: 0;
 }
 
 li {
